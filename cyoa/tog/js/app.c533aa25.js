@@ -456,7 +456,7 @@
             }
           })], 1)
         })), 1) : i("v-row", {
-          staticClass: "display-flex row objectRow pa-0 ma-0",
+          staticClass: `display-flex row row-${t.row.id} objectRow pa-0 ma-0`,
           attrs: {
             justify: t.row.rowJustify
           }
