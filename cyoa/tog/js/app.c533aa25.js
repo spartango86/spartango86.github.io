@@ -431,7 +431,7 @@
             }
           }], null, !1, 3206076815)
         }, [i("span", [t._v(t._s(t.row.imageSourceTooltip))])])], 1) : t._e()]), t.row.isResultRow ? i("v-row", {
-          staticClass: "display-flex row objectRow",
+          staticClass: `display-flex row row-${t.row.id} objectRow`,
           attrs: {
             justify: t.row.rowJustify
           }
@@ -507,7 +507,7 @@
           e = t.$createElement,
           i = t._self._c || e;
         return i("span", [t.checkRequireds(t.row) ? i("span", {
-          staticClass: `row pa-0 row-${t.row.id} choi-${t.object.id}`,
+          staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject`,
           style: t.objectBackground,
           on: {
             click: function (e) {
