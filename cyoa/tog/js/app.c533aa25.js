@@ -507,7 +507,7 @@
           e = t.$createElement,
           i = t._self._c || e;
         return i("span", [t.checkRequireds(t.row) ? i("span", {
-          staticClass: `row pa-0 row-${t.row.id} choice-${t.id}`,
+          staticClass: `row pa-0 row-${t.row.id} choice-${t.objects.id}`,
           style: t.objectBackground,
           on: {
             click: function (e) {
