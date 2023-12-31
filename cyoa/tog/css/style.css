@@ -1,15 +1,5 @@
-/* body::before, body::after {
-    content: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003399/Tower%20of%20God/tog_logo.jpg");
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-}
-body::after {
-    top: unset;
-    bottom: 0;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Nova+Square&family=Philosopher:ital@0;1&display=swap');
+
 body::before {
     content: "";
     display: block;
@@ -47,5 +37,27 @@ body {
     background-color: transparent !important;
 }
 .choiceObject, .rowDescriptionObject {
+    border: 4px transparent solid;
     background-color: #c34571;
+    border-radius: 10px !important;
+}
+.choiceObject p, .rowDescriptionObject p {
+    font-family: "Philosopher" !important;
+}
+.choiceObject h3 {
+    font-family: "Arimo" !important;
+    font-size: 36px !important;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.rowDescriptionObject h2 {
+    font-family: "Nova Square" !important;
+    font-size: 48px !important;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+.choiceObject.selected {
+    background-color: #931541 !important;
+    border: 4px maroon solid;
+    font-style: italic;
 }
