@@ -506,9 +506,9 @@
         var t = this,
           e = t.$createElement,
           i = t._self._c || e;
-          if(t.object.id == "l5v6") console.log(t.checkRequireds(t.object));
+        let req = t.checkRequireds(t.object);
         return i("span", [t.checkRequireds(t.row) ? i("span", {
-          staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject ${t.object.isActive ? 'selected' : 'unselected'} ${t.object.isNotSelectable ? 'disabled' : 'enabled'}`,
+          staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject ${t.object.isActive ? 'selected' : 'unselected'} ${!req ? 'disabled' : 'enabled'}`,
           style: t.objectBackground,
           on: {
             click: function (e) {
