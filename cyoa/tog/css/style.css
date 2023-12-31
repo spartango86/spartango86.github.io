@@ -1,9 +1,17 @@
 body {
     background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1703988603/Tower%20of%20God/rachelbaam.jpg");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
 }
 #app.v-application,
 .v-application--wrap .pb-12 {
     background-color: transparent !important;
+}
+.row > .col > div[style*="background-color: rgb(255, 255, 255)"] {
+    background-color: transparent !important;
+}
+.choiceObject {
+    background-color: white;
 }
