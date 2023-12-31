@@ -233,7 +233,7 @@
         }, [t.checkIfDeselect(t.row) ? i("span", [i("div", {
           style: "" != t.row.title && "" != t.row.text ? t.rowBackground : ""
         }, [1 == t.row.template || t.window.width < 1e3 ? i("div", {
-          staticClass: "col pa-0"
+          staticClass: `col pa-0 row-${t.row.id} rowDescriptionObject`
         }, [t.row.isButtonRow || "" === t.row.imageSourceTooltip || "undefined" === typeof t.row.imageSourceTooltip ? t.row.isButtonRow ? i("v-btn", {
           style: t.rowButton,
           attrs: {
