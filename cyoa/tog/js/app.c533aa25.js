@@ -1818,7 +1818,7 @@
             return t
           },
           objectBackground: function () {
-            if(this.object.isActive) {
+            if(!this.object.isActive) {
               this.object.staticClass += "selectedObject";
             }
             var t = (this.object.isActive ? "" : 'background-image: url("' + this.styling.objectBackgroundImage + '");background-repeat: repeat;') + (this.styling.objectBgColorIsOn ? "background-color: " + this.styling.objectBgColor + " ;" : "") + "margin:" + this.styling.objectMargin + "px; " + (this.object.isActive || this.object.isImageUpload && this.object.image.length > 0 ? "background-color: " + this.styling.selFilterBgColor + ";" : ""),
