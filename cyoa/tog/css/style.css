@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#app.v-application {
+#app.v-application,
+.v-application-wrap .pb-12 {
     background-color: transparent;
 }
