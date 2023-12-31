@@ -1,12 +1,9 @@
-*[style*="background-color: rgb(255,255,255)"] {
-    background-color: transparent !important;
-}
 body {
     background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1703988603/Tower%20of%20God/rachelbaam.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-#app.v-application/*,
-.v-application-wrap .pb-12*/ {
-    background-color: transparent;
+#app.v-application,
+.v-application-wrap .pb-12 {
+    background-color: transparent !important;
 }
