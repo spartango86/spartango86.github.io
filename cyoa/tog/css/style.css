@@ -1,9 +1,43 @@
+/* body::before, body::after {
+    content: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003399/Tower%20of%20God/tog_logo.jpg");
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+body::after {
+    top: unset;
+    bottom: 0;
+} */
+body::before {
+    content: "";
+    display: block;
+    height: 300px;
+    background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003399/Tower%20of%20God/tog_logo.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-attachment: fixed;
+    border-bottom: 3px maroon solid;
+}
+body::after {
+    content: "";
+    display: block;
+    height: 300px;
+    background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704004564/Tower%20of%20God/zahard_eyes.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    border-top: 3px maroon solid;
+}
 body {
-    background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1703988603/Tower%20of%20God/rachelbaam.jpg");
+    background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003030/Tower%20of%20God/wolhaiksong.png");
     background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+/*     padding-top: 300px; */
 }
 #app.v-application,
 .v-application--wrap .pb-12 {
