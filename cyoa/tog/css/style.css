@@ -4,6 +4,6 @@ body {
     background-size: cover;
 }
 #app.v-application,
-.v-application-wrap .pb-12 {
+.v-application--wrap .pb-12 {
     background-color: transparent !important;
 }
