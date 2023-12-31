@@ -504,9 +504,9 @@
       c = [],
       h = (i("4160"), i("caad"), i("c975"), i("a434"), i("4d63"), i("ac1f"), i("25f0"), i("2532"), i("5319"), i("1276"), i("159b"), function () {
         var t = this,
-        console.log(t.object.id, t.object.checkRequireds);
           e = t.$createElement,
           i = t._self._c || e;
+          console.log(t.object.id, t.object.checkRequireds);
         return i("span", [t.checkRequireds(t.row) ? i("span", {
           staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject ${t.object.isActive ? 'selected' : 'unselected'} ${t.object.isNotSelectable ? 'disabled' : 'enabled'}`,
           style: t.objectBackground,
