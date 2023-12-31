@@ -3,6 +3,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#app {
+#app.v-application {
     background-color: transparent;
 }
