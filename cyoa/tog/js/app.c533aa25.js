@@ -507,7 +507,7 @@
           e = t.$createElement,
           i = t._self._c || e;
         return i("span", [t.checkRequireds(t.row) ? i("span", {
-          staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject`,
+          staticClass: `row pa-0 row-${t.row.id} choice-${t.object.id} choiceObject ${t.object.isActive ? 'selected' : 'unselected'}`,
           style: t.objectBackground,
           on: {
             click: function (e) {
@@ -1818,9 +1818,6 @@
             return t
           },
           objectBackground: function () {
-            if(!this.object.isActive) {
-              this.object.staticClass += "selectedObject";
-            }
             var t = (this.object.isActive ? "" : 'background-image: url("' + this.styling.objectBackgroundImage + '");background-repeat: repeat;') + (this.styling.objectBgColorIsOn ? "background-color: " + this.styling.objectBgColor + " ;" : "") + "margin:" + this.styling.objectMargin + "px; " + (this.object.isActive || this.object.isImageUpload && this.object.image.length > 0 ? "background-color: " + this.styling.selFilterBgColor + ";" : ""),
               e = this.styling.objectBorderRadiusIsPixels ? "px" : "%";
             this.styling.objectGradientIsOn && (t += this.styling.objectGradientIsOn ? ";background-image: linear-gradient(" + this.styling.objectGradient + ");" : ""), 1 == this.object.template || this.row.choicesShareTemplate ? t += "border-radius: " + this.styling.objectBorderRadiusTopLeft + 0 + e + " " + this.styling.objectBorderRadiusTopRight + 0 + e + " " + this.styling.objectBorderRadiusBottomRight + 0 + e + " " + this.styling.objectBorderRadiusBottomLeft + 0 + e + "; " : 2 == this.object.template ? t += "border-radius: " + this.styling.objectBorderRadiusTopLeft + 0 + e + " " + this.styling.objectBorderRadiusBottomLeft + 0 + e + " " + this.styling.objectBorderRadiusBottomRight + 0 + e + " " + this.styling.objectBorderRadiusTopRight + 0 + e + "; " : t += "border-radius: " + this.styling.objectBorderRadiusBottomLeft + 0 + e + " " + this.styling.objectBorderRadiusTopLeft + 0 + e + " " + this.styling.objectBorderRadiusTopRight + 0 + e + " " + this.styling.objectBorderRadiusBottomRight + 0 + e + "; ", this.styling.objectOverflowIsOn && (t += "overflow:hidden;"), this.styling.objectBorderIsOn && (t += "border: " + this.styling.objectBorderWidth + "px " + this.styling.objectBorderStyle + " " + this.styling.objectBorderColor + ";"), t += "filter: ", this.styling.objectDropShadowIsOn && (t += "drop-shadow(" + this.styling.objectDropShadowH + "px " + this.styling.objectDropShadowV + "px " + this.styling.objectDropShadowBlur + "px " + this.styling.objectDropShadowColor + ")");
