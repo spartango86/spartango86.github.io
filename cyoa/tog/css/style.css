@@ -3,8 +3,10 @@
 body::before {
     content: "";
     display: block;
-    height: 300px;
+    height: 400px;
     background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003399/Tower%20of%20God/tog_logo.jpg");
+    background-color: black;
+    background-size: 30%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-attachment: fixed;
@@ -13,10 +15,12 @@ body::before {
 body::after {
     content: "";
     display: block;
-    height: 300px;
+    height: 500px;
     background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704004564/Tower%20of%20God/zahard_eyes.jpg");
+    background-color: black;
+    background-size: 30%;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: calc(50% + 2px) bottom;
     background-attachment: fixed;
     border-top: 3px maroon solid;
 }
@@ -27,7 +31,6 @@ body {
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
-/*     padding-top: 300px; */
 }
 #app.v-application,
 .v-application--wrap .pb-12 {
