@@ -93,3 +93,7 @@ body {
 .choice-qz18.selected p, .choice-qz18.unselected:hover p {
     opacity: 1;
 }
+
+.rowDescriptionObject.row-69bu {
+    display: none;
+}
