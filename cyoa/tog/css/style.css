@@ -64,3 +64,32 @@ body {
     border: 4px maroon solid;
     font-style: italic;
 }
+.choiceObject.row-69bu span > span {
+    display: block;
+    position: relative;
+    min-height: 87.2px;
+}
+.choiceObject.row-69bu.unselected h3 {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+    transition: all 0.3s linear;
+}
+.choiceObject.row-69bu.selected h3, .choiceObject.row-69bu.unselected:hover h3 {
+    transform: translateY(0);
+    top: 0;
+}
+.choice-qz18.unselected p {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+.choice-qz18.selected p, .choice-qz18.unselected:hover p {
+    opacity: 1;
+}
