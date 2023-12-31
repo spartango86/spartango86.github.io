@@ -12,6 +12,6 @@ body {
 .row > .col > div[style*="background-color: rgb(255, 255, 255)"] {
     background-color: transparent !important;
 }
-.choiceObject {
+.choiceObject, .rowDescriptionObject {
     background-color: white;
 }
