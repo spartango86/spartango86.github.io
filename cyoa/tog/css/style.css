@@ -36,6 +36,10 @@ body {
 .v-application--wrap .pb-12 {
     background-color: transparent !important;
 }
+#app {
+    --sidebar-gutter: 50px;
+    padding-left: var(--sidebar-gutter);
+}
 .row > .col > div[style*="background-color: rgb(255, 255, 255)"] {
     background-color: transparent !important;
 }
