@@ -64,6 +64,13 @@ body {
     border: 4px maroon solid;
     font-style: italic;
 }
+.choiceObject.unselected.disabled {
+    filter: grayscale(70%) brightness(30%) !important;
+    transition: all 0.3s linear;
+}
+.choiceObject.unselected.disabled:hover {
+    filter: grayscale(70%) brightness(55%) !important;
+}
 .choiceObject.row-69bu span > span {
     display: block;
     position: relative;
