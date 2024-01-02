@@ -47,6 +47,7 @@ body {
     width: var(--sidebar-gutter);
     height: 100vh !important;
     flex-direction: column;
+    filter: invert(100%);
 }
 #app .v-bottom-navigation:hover {
     --sidebar-gutter: 100px;
@@ -60,9 +61,11 @@ body {
     background-color: transparent !important;
 }
 .choiceObject, .rowDescriptionObject {
-    border: 4px transparent solid;
+    border: 4px lightgrey solid;
     background-color: #c34571;
     border-radius: 10px !important;
+    transition: border 0.3s linear;
+    
 }
 .choiceObject p, .rowDescriptionObject p {
     font-family: "Philosopher" !important;
