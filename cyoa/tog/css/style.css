@@ -117,7 +117,7 @@ body {
     transform: translateY(0);
     top: 0;
 }
-.choice-qz18.unselected p {
+.choiceObject.row-69bu.unselected p {
     opacity: 0;
     transition: opacity 0.3s linear;
     position: absolute;
@@ -126,7 +126,7 @@ body {
     transform: translate(-50%);
     width: 100%;
 }
-.choice-qz18.selected p, .choice-qz18.unselected:hover p {
+.choiceObject.row-69bu.selected p, .choiceObject.row-69bu.unselected:hover p {
     opacity: 1;
 }
 
