@@ -37,8 +37,24 @@ body {
     background-color: transparent !important;
 }
 #app {
-    --sidebar-gutter: 50px;
+    --sidebar-gutter: 56px;
     padding-left: var(--sidebar-gutter);
+    transition: padding 0.3s linear;
+}
+#app .v-bottom-navigation {
+    top: 0;
+    left: 0;
+    width: var(--sidebar-gutter);
+    height: 100vh !important;
+    flex-direction: column;
+}
+#app .v-bottom-navigation:hover {
+    --sidebar-gutter: 100px;
+}
+#app .v-item-group.v-bottom-navigation .v-btn {
+    min-width: unset;
+    max-width: 100%;
+    margin: 0 auto;
 }
 .row > .col > div[style*="background-color: rgb(255, 255, 255)"] {
     background-color: transparent !important;
