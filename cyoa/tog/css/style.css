@@ -87,6 +87,12 @@ body {
     border: 4px maroon solid;
     font-style: italic;
 }
+.choiceObject:hover {
+    cursor: pointer;
+}
+.choiceObject.disabled:hover {
+    cursor: not-allowed;
+}
 .choiceObject.unselected.disabled {
     filter: grayscale(70%) brightness(30%) !important;
     transition: all 0.3s linear;
