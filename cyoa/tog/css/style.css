@@ -72,9 +72,13 @@ body {
 }
 .choiceObject h3 {
     font-family: "Arimo" !important;
-    font-size: 36px !important;
+    font-size: 32px !important;
     font-variant: small-caps;
     font-weight: bold;
+}
+.choiceObject h3 + p {
+    font-family: "Arimo" !important;
+    font-size: 16px !important;
 }
 .rowDescriptionObject h2 {
     font-family: "Nova Square" !important;
