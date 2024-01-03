@@ -10,7 +10,6 @@ body::before {
     background-repeat: no-repeat;
     background-position-x: center;
     background-attachment: fixed;
-    border-bottom: 3px maroon solid;
 }
 body::after {
     content: "";
@@ -22,7 +21,6 @@ body::after {
     background-repeat: no-repeat;
     background-position: calc(50% + 2px) bottom;
     background-attachment: fixed;
-    border-top: 3px maroon solid;
 }
 body {
     background: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1704003030/Tower%20of%20God/wolhaiksong.png");
@@ -40,6 +38,8 @@ body {
     --sidebar-gutter: 56px;
     padding-left: var(--sidebar-gutter);
     transition: padding 0.3s linear;
+    border-top: 3px maroon solid;
+    border-bottom: 3px maroon solid;
 }
 #app .v-bottom-navigation {
     top: 0;
