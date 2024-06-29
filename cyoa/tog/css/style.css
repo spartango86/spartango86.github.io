@@ -90,6 +90,7 @@ body {
     background-color: #931541 !important;
     border: 4px maroon solid;
     font-style: italic;
+    color: #e7e7e7;
 }
 .choiceObject:hover {
     cursor: pointer;
