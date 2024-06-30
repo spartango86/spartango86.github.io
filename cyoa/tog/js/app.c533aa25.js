@@ -3685,8 +3685,12 @@
                         console.log(req, count);
                         t.app.rows.forEach((_row) => {
                           _row.objects.forEach((_obj,oi) => {
-                            if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
-                            if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable-1) {
+                            if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
+                            console.log(`_obj.id == req::${_obj.id == req}`,
+                            `t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,
+                            `"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,
+                            `Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
+                            if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
                                 return !1;
                               }
                             }
