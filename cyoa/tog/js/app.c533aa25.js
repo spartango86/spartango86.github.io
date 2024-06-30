@@ -3693,7 +3693,7 @@
                           )
                         })
                       }
-                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && !countVal && "id" == i.requireds[s].type) {
+                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && countVal && "id" == i.requireds[s].type) {
                         return !1;
                       }
                       if ("points" == i.requireds[s].type) {
