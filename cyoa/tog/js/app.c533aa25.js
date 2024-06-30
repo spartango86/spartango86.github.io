@@ -513,6 +513,7 @@
           on: {
             click: function (e) {
               console.log(t.object.id);
+              console.log(e);
               if(t.object.isSelectableMultiple) {
                 console.log(t.object);
                 console.log(t.object.multipleScoreId);
