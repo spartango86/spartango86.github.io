@@ -1918,7 +1918,7 @@
             if (t.showRequired)
               if ("id" == t.type) {
                 if(t.reqId.includes("/ON#")) {
-                  let [req, count] = t.reqId.split("/ON#");
+                  var [req, count] = t.reqId.split("/ON#");
                 }
                 for (e = 0; e < this.app.rows.length; e++)
                   for (i = 0; i < this.app.rows[e].objects.length; i++)
