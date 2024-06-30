@@ -3665,7 +3665,13 @@
                   if(i.requireds[s].reqId.includes("/ON#")) {
                     let [req, count] = i.requireds[s].reqId.split("/ON#");
                     console.log(req, count);
-                    console.log(t.app);
+                    t.app.rows.forEach((_row) => {
+                      _row.objects.forEach((_obj) => {
+                        if(_obj.id == req && _obj.isMultipleUseVariable) {
+                          if(count == _obj.multipleUseVariable) return !1; 
+                        }
+                      })
+                    })
                   }
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     if (i.requireds[s].required) {
