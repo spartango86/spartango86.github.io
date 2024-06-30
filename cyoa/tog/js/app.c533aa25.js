@@ -3690,6 +3690,7 @@
                           }
                         })
                       })
+                      return !0;
                     }
                     if (i.requireds[s].required) {console.log(__i++);
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {console.log(__i++);return !1;}
