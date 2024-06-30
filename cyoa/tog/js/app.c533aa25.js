@@ -516,6 +516,9 @@
               if(t.object.isSelectableMultiple) {
                 console.log(t.object);
                 console.log(t.object.multipleScoreId);
+                console.log(t.object.multipleUseVariable);
+                console.log(t.object.numMultipleTimesMinus);
+                console.log(t.object.numMultipleTimesPluss);
               }
               t.row.isInfoRow || t.object.isNotSelectable || t.object.isSelectableMultiple || t.object.isButtonObject || t.object.isImageUpload ? t.object.isImageUpload && (t.currentComponent = "appImageUpload") : t.activateObject(t.object, t.row)
             }
