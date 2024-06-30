@@ -3658,10 +3658,15 @@
         getters: {
           checkRequireds: function (t, e) {
             return function (i) {
-              console.log(i);
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
                   var o = !1;
+                  // multi req
+                  if(i.requireds[s].reqId.includes("/ON#")) {
+                    let [req, count] = i.requireds[s].reqId.split("/ON#");
+                    console.log(req, count);
+                    console.log(t);
+                  }
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     if (i.requireds[s].required) {
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
