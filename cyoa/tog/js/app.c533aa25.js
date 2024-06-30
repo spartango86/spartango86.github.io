@@ -3668,12 +3668,11 @@
         getters: {
           checkRequireds: function (t, e) {
             return function (i) {
-              var __i = 0;
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
                   var o = !1;
                   
-                  if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {console.log(__i++);
+                  if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {console.log(3675);
                     // multi req
                     if(i.requireds[s].reqId.includes("/ON#")) {
                       let [req, count] = i.requireds[s].reqId.split("/ON#");
@@ -3692,10 +3691,10 @@
                       })
                       return !0;
                     }
-                    if (i.requireds[s].required) {console.log(__i++);
-                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {console.log(__i++);return !1;}
-                      if ("points" == i.requireds[s].type) {console.log(__i++);
-                        if ("undefined" == typeof i.requireds[s].operator) {console.log(__i++);
+                    if (i.requireds[s].required) {console.log(3694);
+                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {console.log(3695);return !1;}
+                      if ("points" == i.requireds[s].type) {console.log(3696);
+                        if ("undefined" == typeof i.requireds[s].operator) {console.log(3697);
                           for (var r = 0; r < t.app.pointTypes.length; r++)
                             if (i.requireds[s].reqId == t.app.pointTypes[r].id && i.requireds[s].reqPoints > t.app.pointTypes[r].startingSum) return !1
                         } else
