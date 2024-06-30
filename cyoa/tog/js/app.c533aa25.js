@@ -3734,13 +3734,12 @@
                     }
                     if (!i.requireds[s].required) {
                       if (t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
-                      if(i.id == "pdzygn") return !0;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var g = 0; g < t.app.pointTypes.length; g++)
                             if (i.requireds[s].reqId == t.app.pointTypes[g].id && i.requireds[s].reqPoints <= t.app.pointTypes[g].startingSum) return !1
-                        } else
-                          for (var w = 0; w < t.app.pointTypes.length; w++)
+                        } else { if(i.id == "pdzygn") return !0;
+                          for (var w = 0; w < t.app.pointTypes.length; w++) {
                             if (i.requireds[s].reqId == t.app.pointTypes[w].id)
                               if (isNaN(parseInt(i.requireds[s].reqPoints))) {
                                 for (var f = 0; f < t.app.pointTypes.length; f++)
@@ -3758,6 +3757,8 @@
                                 if (4 == i.requireds[s].operator && i.requireds[s].reqPoints < t.app.pointTypes[w].startingSum) return !1;
                                 if (5 == i.requireds[s].operator && i.requireds[s].reqPoints <= t.app.pointTypes[w].startingSum) return !1
                               }
+                            }
+                          }
                       } else if ("or" == i.requireds[s].type) {
                         for (var b = !1, m = 0; m < i.requireds[s].orRequired.length; m++) t.app.activated.includes(i.requireds[s].orRequired[m].req) || "" == i.requireds[s].orRequired[m].req || (b = !0);
                         if (!b) return !1
