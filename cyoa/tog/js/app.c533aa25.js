@@ -3686,15 +3686,15 @@
                           // console.log(_row);
                           _row.objects.forEach((_obj) => {
                             if(_obj.id == req && _obj.isMultipleUseVariable) {
-                              // console.log(_obj);
+                              console.log(_obj);
                               if(count == _obj.multipleUseVariable) {
                                 console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                                console.log("success", this);
+                                console.log("success");
                                 return !1;
                               } 
                             }
                           })
-                        }); console.log("fail", this);
+                        }); console.log("fail");
                         // return !0;
                       }
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
