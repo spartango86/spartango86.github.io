@@ -3692,7 +3692,7 @@
                           }
                         })
                       }); console.log("fail");
-                      return !0;
+                      // return !0;
                     }
                     if (i.requireds[s].required) {
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
