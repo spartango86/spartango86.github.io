@@ -3731,7 +3731,7 @@
                         if (c < h && 3 == i.requireds[s].operator) return !1
                       }
                     }
-                    if (!i.requireds[s].required) {
+                    if (!i.requireds[s].required) {console.log(i.id == "pdzygn");
                       if (t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
