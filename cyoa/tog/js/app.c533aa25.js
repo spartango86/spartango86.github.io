@@ -513,7 +513,10 @@
           on: {
             click: function (e) {
               console.log(t.object.id);
-              if(t.object.isSelectableMultiple) console.log(t.object);
+              if(t.object.isSelectableMultiple) {
+                console.log(t.object);
+                console.log(t.object.multipleScoreId);
+              }
               t.row.isInfoRow || t.object.isNotSelectable || t.object.isSelectableMultiple || t.object.isButtonObject || t.object.isImageUpload ? t.object.isImageUpload && (t.currentComponent = "appImageUpload") : t.activateObject(t.object, t.row)
             }
           }
