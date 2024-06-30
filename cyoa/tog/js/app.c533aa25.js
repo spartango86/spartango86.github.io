@@ -3686,16 +3686,14 @@
                           console.log(req, count);
                           t.app.rows.forEach((_row) => {
                             _row.objects.forEach((_obj) => {
-                              if(_obj.id == req && _obj.isMultipleUseVariable) {
-                                console.log(_obj);
-                                if(count == _obj.multipleUseVariable && _obj.isActive) {
+                              if(_obj.id == req && _obj.isMultipleUseVariable && count == _obj.multipleUseVariable) {
                                   console.log("[",_obj.id,_obj.multipleUseVariable,"]");
                                   console.log("success");
                                   return !1;
-                                } 
+                                }
                               }
-                            })
-                          });
+                            )
+                          })
                           return !0;
                         }
                         return !1;
