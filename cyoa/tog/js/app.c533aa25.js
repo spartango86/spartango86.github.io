@@ -1922,7 +1922,8 @@
                     if (t.reqId == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
                     if(t.reqId.includes("/ON#")) {
                       console.log("t",t);
-                      console.log("this",this);
+                      console.log("i",i);
+                      console.log("this",this.app.rows[e]);
                     }
               } else if ("points" == t.type) {
               for (e = 0; e < this.app.pointTypes.length; e++)
