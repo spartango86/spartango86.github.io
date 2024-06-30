@@ -3692,8 +3692,7 @@
                             }
                           )
                         })
-                      }
-                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
+                      } else if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
                         return !1;
                       }
                       if ("points" == i.requireds[s].type) {
