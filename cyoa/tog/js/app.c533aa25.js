@@ -3675,7 +3675,8 @@
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
                       return !1;
-                    } else if (i.requireds[s].required) {
+                    } 
+                    if (i.requireds[s].required) {
                       // multi req
                       console.log("## handle multiselect");
                       console.log(i.requireds[s].reqId);
