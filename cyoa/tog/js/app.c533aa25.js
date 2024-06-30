@@ -3677,27 +3677,27 @@
                     
                     if (i.requireds[s].required) {
                       // multi req
+                      var counted = false;
                       if(i.requireds[s].reqId.includes("/ON#")) {
                         console.log("---------");
                         console.log(i.id, i);
                         let [req, count] = i.requireds[s].reqId.split("/ON#");
                         console.log(req, count);
                         t.app.rows.forEach((_row) => {
-                          // console.log(_row);
                           _row.objects.forEach((_obj) => {
                             if(_obj.id == req && _obj.isMultipleUseVariable) {
                               console.log(_obj);
                               if(count == _obj.multipleUseVariable) {
                                 console.log("[",_obj.id,_obj.multipleUseVariable,"]");
                                 console.log("success");
-                                return !1;
+                                counted = true;
                               } 
                             }
                           })
-                        }); console.log("fail");
+                        }); 
                         // return !0;
                       }
-                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
+                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type || counted) return !1;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var r = 0; r < t.app.pointTypes.length; r++)
