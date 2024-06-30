@@ -3707,6 +3707,11 @@
                     }
                     if (!i.requireds[s].required) {
                       if (t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
+                      if(i.requireds[s].reqId.includes("/ON#")) {
+                        let [req, count] = i.requireds[s].reqId.split("/ON#");
+                        console.log(req, count);
+                        console.log(t);
+                      }
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var g = 0; g < t.app.pointTypes.length; g++)
