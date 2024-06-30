@@ -3678,6 +3678,7 @@
                     } 
                     if (i.requireds[s].required) {
                       // multi req
+                      console.log(i);
                       console.log("## handle multiselect");
                       console.log(i.requireds[s].reqId);
                       if(i.requireds[s].reqId.includes("/ON#")) {
