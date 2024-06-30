@@ -516,7 +516,7 @@
               // console.log(e);
               console.log("----");
               if(t.object.isSelectableMultiple) {
-                // console.log(t.object);
+                console.log(t.object);
                 // console.log(t.object.multipleScoreId);
                 // console.log(t.object.multipleUseVariable);
                 // console.log(t.object.numMultipleTimesMinus);
@@ -636,7 +636,6 @@
             }
           }) : t._e()], 1)
         })), t._l(t.object.requireds, (function (e) {
-          console.log(t); 
           return i("v-col", {
             key: e.index,
             staticClass: "pa-0"
