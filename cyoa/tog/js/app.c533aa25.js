@@ -3663,6 +3663,12 @@
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     if (i.requireds[s].required) {
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
+                      // multi req
+                      if(i.requireds[s].reqId.includs("/ON#") && "id" == i.requireds[s].type) {
+                        let [req, count] = i.requireds[s].reqId.split("/ON#");
+                        console.log(req, count);
+                        console.log(t);
+                      }
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var r = 0; r < t.app.pointTypes.length; r++)
