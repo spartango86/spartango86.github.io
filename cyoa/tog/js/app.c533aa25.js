@@ -636,6 +636,7 @@
             }
           }) : t._e()], 1)
         })), t._l(t.object.requireds, (function (e) {
+          console.log(t); 
           return i("v-col", {
             key: e.index,
             staticClass: "pa-0"
@@ -643,7 +644,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 1", t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
@@ -777,7 +778,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 2", t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
@@ -877,7 +878,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 3", t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
