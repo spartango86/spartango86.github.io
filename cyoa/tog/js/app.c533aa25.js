@@ -3686,8 +3686,8 @@
                         t.app.rows.forEach((_row) => {
                           _row.objects.forEach((_obj,oi) => {
                             if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
-                            if(_obj.id == req && _obj.isMultipleUseVariable) {
-                                countVal = _obj.multipleUseVariable;
+                            if(_obj.id == req && t.app.activated.includes(req) && "id" == i.requireds[s].type && count == _obj.multipleUseVariable) {
+                                return !1;
                               }
                             }
                           )
