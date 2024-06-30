@@ -3689,12 +3689,12 @@
                               // console.log(_obj);
                               if(count == _obj.multipleUseVariable) {
                                 console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                                console.log("success");
+                                console.log("success", this);
                                 return !1;
                               } 
                             }
                           })
-                        }); console.log("fail");
+                        }); console.log("fail", this);
                         // return !0;
                       }
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
