@@ -513,10 +513,13 @@
           on: {
             click: function (e) {
               console.log(t.row);
-              console.log(t.checkRequireds(t.row));
+              t.row.objects.forEach((_obj) => {
+                console.log(_obj.id, _obj.checkRequireds(_obj));
+                console.log(_obj);
+              })
               console.log("----");
               if(t.object.isSelectableMultiple) {
-                console.log(t.object);
+                // console.log(t.object);
                 // console.log(t.object.multipleScoreId);
                 // console.log(t.object.multipleUseVariable);
                 // console.log(t.object.numMultipleTimesMinus);
@@ -3121,7 +3124,7 @@
                     }
                 } else if (this.rows[o].objects[r].isImageUpload)
               for (var l = 0; l < t.length; l++) this.rows[o].objects[r].id == t[l].split("/IMG#")[0] && (this.rows[o].objects[r].image = t[l].split("/IMG#")[1].replaceAll("/CHAR#", ","), t.splice(l, 1));
-            console.log(t)
+            // console.log(t)
           },
           selectedOneMore: function (t) {
             var e = !0;
