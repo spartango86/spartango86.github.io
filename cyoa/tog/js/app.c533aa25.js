@@ -1919,7 +1919,10 @@
               if ("id" == t.type) {
                 for (e = 0; e < this.app.rows.length; e++)
                   for (i = 0; i < this.app.rows[e].objects.length; i++)
-                    if (t.reqId == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText
+                    if (t.reqId == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
+                    if(t.reqId.includes("/ON#")) {
+                      if (t.reqId.split("/ON#")[0] == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText
+                    }
               } else if ("points" == t.type) {
               for (e = 0; e < this.app.pointTypes.length; e++)
                 if (t.reqId == this.app.pointTypes[e].id) return t.beforeText + " " + t.reqPoints + " " + this.app.pointTypes[e].name + " " + t.afterText
