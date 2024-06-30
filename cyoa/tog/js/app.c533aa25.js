@@ -3676,26 +3676,29 @@
                     
                     
                     if (i.requireds[s].required) {
-                      // multi req
-                      if(i.requireds[s].reqId.includes("/ON#")) {
-                        console.log("---------");
-                        console.log(i.id, i);
-                        let [req, count] = i.requireds[s].reqId.split("/ON#");
-                        console.log(req, count);
-                        t.app.rows.forEach((_row) => {
-                          _row.objects.forEach((_obj) => {
-                            if(_obj.id == req && _obj.isMultipleUseVariable) {
-                              console.log(_obj);
-                              if(count == _obj.multipleUseVariable && _obj.isActive) {
-                                console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                                console.log("success");
-                                return !1;
-                              } 
-                            }
+                      
+                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) {
+                        // multi req
+                        if(i.requireds[s].reqId.includes("/ON#")) {
+                          console.log("---------");
+                          console.log(i.id, i);
+                          let [req, count] = i.requireds[s].reqId.split("/ON#");
+                          console.log(req, count);
+                          t.app.rows.forEach((_row) => {
+                            _row.objects.forEach((_obj) => {
+                              if(_obj.id == req && _obj.isMultipleUseVariable) {
+                                console.log(_obj);
+                                if(count == _obj.multipleUseVariable && _obj.isActive) {
+                                  console.log("[",_obj.id,_obj.multipleUseVariable,"]");
+                                  console.log("success");
+                                  return !1;
+                                } 
+                              }
+                            })
                           })
-                        })
+                        }
+                        return !1;
                       }
-                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) return !1;
                       // if(i.id == "pdzygn") return !0;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
