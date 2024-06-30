@@ -514,7 +514,7 @@
             click: function (e) {
               console.log(t.row);
               t.row.objects.forEach((_obj) => {
-                console.log(_obj.id, _obj.checkRequireds(_obj));
+                console.log(_obj.id, t.checkRequireds(_obj));
                 console.log(_obj);
               })
               console.log("----");
