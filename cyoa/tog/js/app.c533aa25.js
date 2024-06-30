@@ -3690,6 +3690,8 @@
                                   console.log("[",_obj.id,_obj.multipleUseVariable,"]");
                                   console.log("success");
                                   return !1;
+                                } else if(_obj.id == req && _obj.isMultipleUseVariable && count !== _obj.multipleUseVariable) {
+                                  return !0;
                                 }
                               }
                             )
