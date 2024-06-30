@@ -512,6 +512,7 @@
           style: t.objectBackground,
           on: {
             click: function (e) {
+              console.log(t.object.id);
               t.row.isInfoRow || t.object.isNotSelectable || t.object.isSelectableMultiple || t.object.isButtonObject || t.object.isImageUpload ? t.object.isImageUpload && (t.currentComponent = "appImageUpload") : t.activateObject(t.object, t.row)
             }
           }
