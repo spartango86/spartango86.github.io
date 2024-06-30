@@ -643,7 +643,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 1", t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
@@ -777,7 +777,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 2", t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
@@ -877,7 +877,7 @@
             staticClass: "pa-0",
             style: t.scoreText,
             domProps: {
-              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e), t.sanitizeArg))
+              innerHTML: t._s(t.$sanitize(t.getChoiceTitle(e)+" 3", t.sanitizeArg))
             }
           }) : t._e()], 1)
         })), "" !== t.object.text ? i("p", {
