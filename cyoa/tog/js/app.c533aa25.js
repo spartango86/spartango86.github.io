@@ -520,6 +520,7 @@
                 console.log(t.object.multipleUseVariable);
                 console.log(t.object.numMultipleTimesMinus);
                 console.log(t.object.numMultipleTimesPluss);
+                console.log(t.app.activated);
                 let prevCount = t.object.multipleUseVariable;
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0 && t.object.isActive) {
