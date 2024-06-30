@@ -512,8 +512,8 @@
           style: t.objectBackground,
           on: {
             click: function (e) {
-              // console.log(t.object.id);
-              // console.log(e);
+              console.log(t.row);
+              console.log(t.checkRequireds(t.row));
               console.log("----");
               if(t.object.isSelectableMultiple) {
                 console.log(t.object);
@@ -3680,7 +3680,7 @@
                           // console.log(_obj);
                           if(count == _obj.multipleUseVariable) {
                             console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                            return !0;
+                            return !1;
                           } 
                         }
                       })
