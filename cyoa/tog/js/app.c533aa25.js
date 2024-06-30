@@ -3682,13 +3682,13 @@
                           // console.log(_obj);
                           if(count == _obj.multipleUseVariable) {
                             console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                            return !0;
+                            return !1;
                           } 
                         }
                       })
                     })
                   }
-                  if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
+                  else if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     if (i.requireds[s].required) {
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
                       if ("points" == i.requireds[s].type) {
