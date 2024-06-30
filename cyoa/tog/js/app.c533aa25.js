@@ -1921,7 +1921,8 @@
                   for (i = 0; i < this.app.rows[e].objects.length; i++)
                     if (t.reqId == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
                     if(t.reqId.includes("/ON#")) {
-                      if (t.reqId.split("/ON#")[0] == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText
+                      console.log("t",t);
+                      console.log("this",this);
                     }
               } else if ("points" == t.type) {
               for (e = 0; e < this.app.pointTypes.length; e++)
