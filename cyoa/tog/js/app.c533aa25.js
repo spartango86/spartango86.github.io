@@ -3668,6 +3668,7 @@
         getters: {
           checkRequireds: function (t, e) {
             return function (i) {
+              var __i = 0;
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
                   var o = !1;
@@ -3688,11 +3689,11 @@
                       })
                     })
                   }
-                  else if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
-                    if (i.requireds[s].required) {
-                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
-                      if ("points" == i.requireds[s].type) {
-                        if ("undefined" == typeof i.requireds[s].operator) {
+                  if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {console.log(__i++);
+                    if (i.requireds[s].required) {console.log(__i++);
+                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {console.log(__i++);return !1;}
+                      if ("points" == i.requireds[s].type) {console.log(__i++);
+                        if ("undefined" == typeof i.requireds[s].operator) {console.log(__i++);
                           for (var r = 0; r < t.app.pointTypes.length; r++)
                             if (i.requireds[s].reqId == t.app.pointTypes[r].id && i.requireds[s].reqPoints > t.app.pointTypes[r].startingSum) return !1
                         } else
