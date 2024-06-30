@@ -3668,10 +3668,12 @@
                     t.app.rows.forEach((_row) => {
                       // console.log(_row);
                       _row.objects.forEach((_obj) => {
-                        console.log(_obj.id, _obj.isMultipleUseVariable);
                         if(_obj.id == req && _obj.isMultipleUseVariable) {
-                          console.log(_obj);
-                          if(count == _obj.multipleUseVariable) return !1; 
+                          // console.log(_obj);
+                          if(count == _obj.multipleUseVariable) {
+                            console.log("[",_obj.id,_obj.multipleUseVariable,"]");
+                            return !1;
+                          } 
                         }
                       })
                     })
