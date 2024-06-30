@@ -3668,16 +3668,16 @@
         getters: {
           checkRequireds: function (t, e) {
             return function (i) {
-              console.log(e);
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
                   var o = !1;
                   
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
-                    console.log("---------");
-                    console.log(i.id);
+                    
                     // multi req
                     if(i.requireds[s].reqId.includes("/ON#")) {
+                      console.log("---------");
+                      console.log(i.id, i);
                       let [req, count] = i.requireds[s].reqId.split("/ON#");
                       console.log(req, count);
                       t.app.rows.forEach((_row) => {
