@@ -3679,6 +3679,7 @@
                       
                       if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) {
                         // multi req
+                        console.log("## handle multiselect");
                         if(i.requireds[s].reqId.includes("/ON#")) {
                           console.log("\n---------\n");
                           console.log(`[[${i.id}]]`);
