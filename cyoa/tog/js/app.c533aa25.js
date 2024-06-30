@@ -3673,35 +3673,29 @@
                   var o = !1;
                   
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
-                    
-                    
+
                     if (i.requireds[s].required) {
-                      
-                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) {
-                        // multi req
-                        console.log("## handle multiselect");
-                        if(i.requireds[s].reqId.includes("/ON#")) {
-                          console.log("\n---------\n");
-                          console.log(`[[${i.id}]]`);
-                          let [req, count] = i.requireds[s].reqId.split("/ON#");
-                          console.log(req, count);
-                          t.app.rows.forEach((_row) => {
-                            _row.objects.forEach((_obj,oi) => {
-                              if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
-                              if(_obj.id == req && _obj.isMultipleUseVariable && count == _obj.multipleUseVariable) {
-                                  // console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                                  // console.log("success");
-                                  // return !1;
-                                } else if(_obj.id == req && _obj.isMultipleUseVariable && count !== _obj.multipleUseVariable) {
-                                  // return !0;
-                                }
+                      // multi req
+                      let countVal = 0;
+                      console.log("## handle multiselect");
+                      if(i.requireds[s].reqId.includes("/ON#")) {
+                        console.log("\n---------\n");
+                        console.log(`[[${i.id}]]`);
+                        let [req, count] = i.requireds[s].reqId.split("/ON#");
+                        console.log(req, count);
+                        t.app.rows.forEach((_row) => {
+                          _row.objects.forEach((_obj,oi) => {
+                            if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
+                            if(_obj.id == req && _obj.isMultipleUseVariable) {
+                                countVal = Number(count) == _obj.multipleUseVariable;
                               }
-                            )
-                          })
-                        }
+                            }
+                          )
+                        })
+                      }
+                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && !countVal && "id" == i.requireds[s].type) {
                         return !1;
                       }
-                      // if(i.id == "pdzygn") return !0;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var r = 0; r < t.app.pointTypes.length; r++)
