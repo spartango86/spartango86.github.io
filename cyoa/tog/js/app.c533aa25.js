@@ -3688,11 +3688,11 @@
                             _row.objects.forEach((_obj,oi) => {
                               console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
                               if(_obj.id == req && _obj.isMultipleUseVariable && count == _obj.multipleUseVariable) {
-                                  console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                                  console.log("success");
-                                  return !1;
+                                  // console.log("[",_obj.id,_obj.multipleUseVariable,"]");
+                                  // console.log("success");
+                                  // return !1;
                                 } else if(_obj.id == req && _obj.isMultipleUseVariable && count !== _obj.multipleUseVariable) {
-                                  return !0;
+                                  // return !0;
                                 }
                               }
                             )
