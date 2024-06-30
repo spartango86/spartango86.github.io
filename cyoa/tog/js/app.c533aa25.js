@@ -522,8 +522,8 @@
                 console.log(t.object.numMultipleTimesPluss);
                 let prevCount = t.object.multipleUseVariable;
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
-                  if(t.object.multipleUseVariable == 0) {
-                    t.deactivateThisChoice();
+                  if(t.object.multipleUseVariable == 0 && t.object.isActive) {
+                    t.activateObject(t.object, t.row);
                   } else if((t.object.multipleUseVariable == 1 && e.target.classList.contains("mdi-plus")) || (t.object.multipleUseVariable == -1 && e.target.classList.contains("mdi-minus"))) {
                     t.activateObject(t.object, t.row);
                   }
