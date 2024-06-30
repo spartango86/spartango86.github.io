@@ -3695,8 +3695,8 @@
                           })
                         })
                       }
-                      if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
-                      if(i.id == "pdzygn") return !0;
+                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) return !1;
+                      // if(i.id == "pdzygn") return !0;
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var r = 0; r < t.app.pointTypes.length; r++)
