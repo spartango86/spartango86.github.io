@@ -1925,7 +1925,7 @@
                     if (t.reqId == this.app.rows[e].objects[i].id) {
                       return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
                     } else if(req == this.app.rows[e].objects[i].id) {
-                      console.log(t);
+                      // console.log(t);
                       return t.beforeText + " " + this.app.rows[e].objects[i].title + ` x${count} ` + t.afterText;
                     }
               } else if ("points" == t.type) {
