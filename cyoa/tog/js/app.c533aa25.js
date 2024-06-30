@@ -3687,13 +3687,13 @@
                           _row.objects.forEach((_obj,oi) => {
                             if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
                             if(_obj.id == req && _obj.isMultipleUseVariable) {
-                                countVal = Number(count) == _obj.multipleUseVariable;
+                                countVal = _obj.multipleUseVariable;
                               }
                             }
                           )
                         })
                       }
-                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && countVal && "id" == i.requireds[s].type) {
+                      if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && Number(i.requireds[s].reqId.split("/ON#")[1]) == countVal && "id" == i.requireds[s].type) {
                         return !1;
                       }
                       if ("points" == i.requireds[s].type) {
