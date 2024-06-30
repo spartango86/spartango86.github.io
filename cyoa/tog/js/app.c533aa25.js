@@ -3673,10 +3673,10 @@
                   var o = !1;
                   
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
-
-                    if (i.requireds[s].required) {
+                    if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
+                      return !1;
+                    } else if (i.requireds[s].required) {
                       // multi req
-                      let countVal = 0;
                       console.log("## handle multiselect");
                       if(i.requireds[s].reqId.includes("/ON#")) {
                         console.log("\n---------\n");
@@ -3692,9 +3692,8 @@
                             }
                           )
                         })
-                      } else if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
-                        return !1;
                       }
+                      
                       if ("points" == i.requireds[s].type) {
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var r = 0; r < t.app.pointTypes.length; r++)
