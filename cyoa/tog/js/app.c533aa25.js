@@ -3666,8 +3666,10 @@
                     let [req, count] = i.requireds[s].reqId.split("/ON#");
                     console.log(req, count);
                     t.app.rows.forEach((_row) => {
+                      console.log(_row);
                       _row.objects.forEach((_obj) => {
                         if(_obj.id == req && _obj.isMultipleUseVariable) {
+                          console.log(_obj);
                           if(count == _obj.multipleUseVariable) return !1; 
                         }
                       })
