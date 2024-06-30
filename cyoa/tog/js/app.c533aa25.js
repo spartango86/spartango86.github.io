@@ -514,13 +514,14 @@
             click: function (e) {
               console.log(t.object.id);
               console.log(e);
+              console.log("----");
               if(t.object.isSelectableMultiple) {
-                console.log(t.object);
-                console.log(t.object.multipleScoreId);
-                console.log(t.object.multipleUseVariable);
-                console.log(t.object.numMultipleTimesMinus);
-                console.log(t.object.numMultipleTimesPluss);
-                console.log(t.app.activated);
+                // console.log(t.object);
+                // console.log(t.object.multipleScoreId);
+                // console.log(t.object.multipleUseVariable);
+                // console.log(t.object.numMultipleTimesMinus);
+                // console.log(t.object.numMultipleTimesPluss);
+                // console.log(t.app.activated);
                 let prevCount = t.object.multipleUseVariable;
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0 && t.object.isActive) {
