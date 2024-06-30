@@ -3675,7 +3675,7 @@
                   
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     console.log("---------");
-                    console.log(i);
+                    console.log(i.id);
                     // multi req
                     if(i.requireds[s].reqId.includes("/ON#")) {
                       let [req, count] = i.requireds[s].reqId.split("/ON#");
@@ -3691,7 +3691,7 @@
                             } 
                           }
                         })
-                      })
+                      }); console.log("fail");
                       return !0;
                     }
                     if (i.requireds[s].required) {
