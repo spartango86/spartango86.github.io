@@ -3664,7 +3664,7 @@
                     if (i.requireds[s].required) {
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
                       // multi req
-                      if(i.requireds[s].reqId.includs("/ON#") && "id" == i.requireds[s].type) {
+                      if(i.requireds[s].reqId.includes("/ON#") && "id" == i.requireds[s].type) {
                         let [req, count] = i.requireds[s].reqId.split("/ON#");
                         console.log(req, count);
                         console.log(t);
