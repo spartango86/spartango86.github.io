@@ -515,7 +515,7 @@
               console.log(t.row);
               t.row.objects.forEach((_obj) => {
                 console.log(_obj.id, t.checkRequireds(_obj));
-                console.log(_obj);
+                // console.log(_obj);
               })
               console.log("----");
               if(t.object.isSelectableMultiple) {
