@@ -1917,13 +1917,15 @@
             var e, i;
             if (t.showRequired)
               if ("id" == t.type) {
+                if(t.reqId.includes("/ON#")) {
+                  let [req, count] = t.reqId.split("/ON#");
+                }
                 for (e = 0; e < this.app.rows.length; e++)
                   for (i = 0; i < this.app.rows[e].objects.length; i++)
-                    if (t.reqId == this.app.rows[e].objects[i].id) return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
-                    if(t.reqId.includes("/ON#")) {
-                      console.log("t",t);
-                      console.log("i",i,"e",e);
-                      console.log("this",this.app.rows);
+                    if (t.reqId == this.app.rows[e].objects[i].id) {
+                      return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
+                    } else if(req == this.app.rows[e].objects[i].id) {
+                      return t.beforeText + " " + this.app.rows[e].objects[i].title + " " + t.afterText;
                     }
               } else if ("points" == t.type) {
               for (e = 0; e < this.app.pointTypes.length; e++)
