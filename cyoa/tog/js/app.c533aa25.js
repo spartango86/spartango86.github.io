@@ -3668,6 +3668,8 @@
         getters: {
           checkRequireds: function (t, e) {
             return function (i) {
+              console.log("---------");
+              console.log(i,t);
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
                   var o = !1;
