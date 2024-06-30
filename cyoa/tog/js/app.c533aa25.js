@@ -3657,6 +3657,7 @@
         },
         getters: {
           checkRequireds: function (t, e) {
+            console.log(e);
             return function (i) {
               if ("undefined" !== typeof i.requireds)
                 for (var s = 0; s < i.requireds.length; s++) {
