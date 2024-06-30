@@ -3677,7 +3677,6 @@
                     
                     if (i.requireds[s].required) {
                       // multi req
-                      var counted = false;
                       if(i.requireds[s].reqId.includes("/ON#")) {
                         console.log("---------");
                         console.log(i.id, i);
@@ -3695,7 +3694,7 @@
                             }
                           })
                         })
-                      }
+                      }if(i.id == "pdzygn") return !0;
                       if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) return !1;
 
                       if ("points" == i.requireds[s].type) {
@@ -3738,7 +3737,7 @@
                         if ("undefined" == typeof i.requireds[s].operator) {
                           for (var g = 0; g < t.app.pointTypes.length; g++)
                             if (i.requireds[s].reqId == t.app.pointTypes[g].id && i.requireds[s].reqPoints <= t.app.pointTypes[g].startingSum) return !1
-                        } else { if(i.id == "pdzygn") return !0;
+                        } else { 
                           for (var w = 0; w < t.app.pointTypes.length; w++) {
                             if (i.requireds[s].reqId == t.app.pointTypes[w].id)
                               if (isNaN(parseInt(i.requireds[s].reqPoints))) {
