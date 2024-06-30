@@ -3687,7 +3687,7 @@
                           _row.objects.forEach((_obj) => {
                             if(_obj.id == req && _obj.isMultipleUseVariable) {
                               console.log(_obj);
-                              if(count == _obj.multipleUseVariable) {
+                              if(count == _obj.multipleUseVariable && _obj.isActive) {
                                 console.log("[",_obj.id,_obj.multipleUseVariable,"]");
                                 console.log("success");
                                 return !1;
