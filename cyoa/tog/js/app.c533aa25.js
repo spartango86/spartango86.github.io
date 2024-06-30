@@ -520,10 +520,11 @@
                 console.log(t.object.multipleUseVariable);
                 console.log(t.object.numMultipleTimesMinus);
                 console.log(t.object.numMultipleTimesPluss);
+                let prevCount = t.object.multipleUseVariable;
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0) {
                     t.deactivateThisChoice();
-                  } else if(t.object.multipleUseVariable == 1 || t.object.multipleUseVariable == -1) {
+                  } else if((t.object.multipleUseVariable == 1 && e.target.classList.contains("mdi-plus")) || (t.object.multipleUseVariable == -1 && e.target.classList.contains("mdi-minus"))) {
                     t.activateObject(t.object, t.row);
                   }
                 }
