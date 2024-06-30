@@ -3680,7 +3680,7 @@
                           // console.log(_obj);
                           if(count == _obj.multipleUseVariable) {
                             console.log("[",_obj.id,_obj.multipleUseVariable,"]");
-                            return !1;
+                            return !0;
                           } 
                         }
                       })
