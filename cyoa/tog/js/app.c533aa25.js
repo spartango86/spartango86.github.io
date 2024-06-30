@@ -3680,12 +3680,13 @@
                       if (!t.app.activated.includes(i.requireds[s].reqId.split("/ON#")[0]) && "id" == i.requireds[s].type) {
                         // multi req
                         if(i.requireds[s].reqId.includes("/ON#")) {
-                          console.log("---------");
-                          console.log(i.id, i);
+                          console.log("\n---------\n");
+                          console.log(`[[${i.id}]]`);
                           let [req, count] = i.requireds[s].reqId.split("/ON#");
                           console.log(req, count);
                           t.app.rows.forEach((_row) => {
-                            _row.objects.forEach((_obj) => {
+                            _row.objects.forEach((_obj,oi) => {
+                              console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`)
                               if(_obj.id == req && _obj.isMultipleUseVariable && count == _obj.multipleUseVariable) {
                                   console.log("[",_obj.id,_obj.multipleUseVariable,"]");
                                   console.log("success");
