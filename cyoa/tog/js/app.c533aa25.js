@@ -531,7 +531,7 @@
                     t.rows.forEach((_row) => {
                       _row.objects.forEach((_obj) => {
                         if("pdzygn" == _obj.id) {
-                          T.activateObject(_obj,_row);
+                          t.activateObject(_obj,_row);
                         }
                       })
                     })
