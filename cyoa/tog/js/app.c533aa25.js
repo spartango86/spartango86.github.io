@@ -528,6 +528,7 @@
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0 && t.object.isActive) {
                     t.activateObject(t.object, t.row);
+                    console.log(t);
                     t.rows.forEach((_row) => {
                       _row.objects.forEach((_obj) => {
                         if("pdzygn" == _obj.id) {
@@ -3683,11 +3684,11 @@
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     // multi req
                     // console.log(i);
-                    console.log("## handle multiselect");
-                    console.log(i.requireds[s].reqId);
+                    // console.log("## handle multiselect");
+                    // console.log(i.requireds[s].reqId);
                     if(i.requireds[s].reqId.includes("/ON#")) {
                       console.log("\n---------\n");
-                      console.log(`[[${i.id}]]`);
+                      // console.log(`[[${i.id}]]`);
                       let [req, count] = i.requireds[s].reqId.split("/ON#");
                       console.log(req, count);
                       t.app.rows.forEach((_row) => {
