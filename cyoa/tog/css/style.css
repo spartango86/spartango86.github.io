@@ -142,7 +142,7 @@ body {
 .choiceObject.row-69bu.selected p, .choiceObject.row-69bu.unselected:hover p {
     opacity: 1;
 }
-.rowDescriptionObject.row-69bu {
+.rowDescriptionObject:is(.row-69bu, .row-zebd) {
     display: none;
 }
 .rowDescriptionObject.row-ro2w {
