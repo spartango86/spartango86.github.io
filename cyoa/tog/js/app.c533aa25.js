@@ -512,7 +512,7 @@
           style: t.objectBackground,
           on: {
             click: function (e) {
-              // console.log(t.row);
+              console.log(t);
               // t.row.objects.forEach((_obj) => {
               //   console.log(_obj.id, t.checkRequireds(_obj));
               //   // console.log(_obj);
@@ -1995,7 +1995,7 @@
             var i = this,
               s = this.checkRequireds(t),
               o = this.checkPoints(t);
-              console.log(`activating ${t}\ncontext: ${i}`);
+              // console.log(`activating ${t}\ncontext: ${i}`);
             if (e.currentChoices + 1 > e.allowedChoices && !t.isActive && 0 != e.allowedChoices)
               for (var r = 0; r < e.objects.length; r++) e.objects[r].isActive && e.currentChoices + 1 > e.allowedChoices && this.activateObject(e.objects[r], e);
             if (s && o && (e.currentChoices < e.allowedChoices || 0 == e.allowedChoices)) {
