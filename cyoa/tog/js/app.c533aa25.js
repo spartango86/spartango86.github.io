@@ -3678,23 +3678,23 @@
                     // console.log(i);
                     // console.log("## handle multiselect");
                     // console.log(i.requireds[s].reqId);
-                    if(i.requireds[s].reqId.includes("/ON#")) {return !1;
-                      console.log("\n---------\n");
-                      // console.log(`[[${i.id}]]`);
-                      let [req, count] = i.requireds[s].reqId.split("/ON#");
-                      console.log(req, count);
-                      t.app.rows.forEach((_row) => {
-                        _row.objects.forEach((_obj) => {
-                          // if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
-                          // console.log(`_obj.id == req::${_obj.id == req}`,`t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,`"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,`Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
-                          if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
-                            // console.log(e);
-                            // console.log("app",t);
-                            return !1;
-                          }
-                        })
-                      })
-                    }
+                    // if(i.requireds[s].reqId.includes("/ON#")) {
+                    //   console.log("\n---------\n");
+                    //   // console.log(`[[${i.id}]]`);
+                    //   let [req, count] = i.requireds[s].reqId.split("/ON#");
+                    //   console.log(req, count);
+                    //   t.app.rows.forEach((_row) => {
+                    //     _row.objects.forEach((_obj) => {
+                    //       // if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
+                    //       // console.log(`_obj.id == req::${_obj.id == req}`,`t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,`"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,`Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
+                    //       if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
+                    //         // console.log(e);
+                    //         // console.log("app",t);
+                    //         return !1;
+                    //       }
+                    //     })
+                    //   })
+                    // }
                     if (!t.app.activated.includes(i.requireds[s].reqId) && "id" == i.requireds[s].type) {
                       return !1;
                     } else if (i.requireds[s].required) {
