@@ -75,6 +75,7 @@ body {
     font-size: 34px !important;
     font-variant: small-caps;
     font-weight: bold;
+    padding: 0 5px;
 }
 .choiceObject > .ma-0 > span > h3 + .col > .col {
   font-size: 120% !important;
