@@ -528,14 +528,6 @@
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0 && t.object.isActive) {
                     t.activateObject(t.object, t.row);
-                    console.log(t);
-                    t.rows.forEach((_row) => {
-                      _row.objects.forEach((_obj) => {
-                        if("pdzygn" == _obj.id) {
-                          t.activateObject(_obj,_row);
-                        }
-                      })
-                    })
                   } else if((t.object.multipleUseVariable == 1 && e.target.classList.contains("mdi-plus")) || (t.object.multipleUseVariable == -1 && e.target.classList.contains("mdi-minus"))) {
                     t.activateObject(t.object, t.row);
                   }
@@ -3686,7 +3678,7 @@
                     // console.log(i);
                     // console.log("## handle multiselect");
                     // console.log(i.requireds[s].reqId);
-                    if(i.requireds[s].reqId.includes("/ON#")) {
+                    if(i.requireds[s].reqId.includes("/ON#")) {return !1;
                       console.log("\n---------\n");
                       // console.log(`[[${i.id}]]`);
                       let [req, count] = i.requireds[s].reqId.split("/ON#");
