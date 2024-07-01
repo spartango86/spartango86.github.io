@@ -1995,6 +1995,7 @@
             var i = this,
               s = this.checkRequireds(t),
               o = this.checkPoints(t);
+              console.log(`activating ${t}\ncontext: ${i}`);
             if (e.currentChoices + 1 > e.allowedChoices && !t.isActive && 0 != e.allowedChoices)
               for (var r = 0; r < e.objects.length; r++) e.objects[r].isActive && e.currentChoices + 1 > e.allowedChoices && this.activateObject(e.objects[r], e);
             if (s && o && (e.currentChoices < e.allowedChoices || 0 == e.allowedChoices)) {
@@ -2021,7 +2022,7 @@
                 if (this.app.rows.forEach((function (e) {
                     e.objects.forEach((function (s) {
                       s.scores.forEach((function (o) {
-                        o.requireds.forEach((function (o) {console.log('foo');
+                        o.requireds.forEach((function (o) {
                           if (s.isActive)(o.reqId == t.id || JSON.stringify(o).includes('"' + t.id + '"')) && (19 == h.length ? h += s.title : h += ", " + s.title, i.activateObject(s, e));
                           else if (s.isSelectableMultiple && JSON.stringify(o).includes('"' + t.id + '"')) {
                             console.log("one"), 19 == h.length && s.multipleUseVariable > 0 ? h += s.title : s.multipleUseVariable > 0 && (h += ", " + s.title);
@@ -3674,7 +3675,7 @@
                   
                   if ("undefined" !== typeof i.requireds[s].requireds ? e.checkRequireds(i.requireds[s]) && (o = !0) : o = !0, o) {
                     // multi req
-                    console.log(i);
+                    // console.log(i);
                     console.log("## handle multiselect");
                     console.log(i.requireds[s].reqId);
                     if(i.requireds[s].reqId.includes("/ON#")) {
