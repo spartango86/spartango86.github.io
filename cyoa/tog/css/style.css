@@ -142,7 +142,26 @@ body {
 .choiceObject.row-69bu.selected p, .choiceObject.row-69bu.unselected:hover p {
     opacity: 1;
 }
-
 .rowDescriptionObject.row-69bu {
     display: none;
+}
+.rowDescriptionObject.row-ro2w {
+  --img-left: url("https://res.cloudinary.com/dej3xww0h/image/upload/v1719814818/Tower%20of%20God/shinsu/shinsu_is_everything_yuga_left.png");
+  display: grid;
+  grid-template-areas: 
+    "a b"
+    "a c"
+    "a c";
+  grid-template-columns: 25% 1fr;
+}
+.rowDescriptionObject.row-ro2w h2 {
+  width: 100%;
+  grid-area: b;
+}
+.rowDescriptionObject.row-ro2w img {
+  content: var(--img-left);
+  grid-area: a;
+}
+.rowDescriptionObject.row-ro2w p {
+  grid-area: c;
 }
