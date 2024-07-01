@@ -3686,6 +3686,7 @@
                         _row.objects.forEach((_obj) => {
                           // if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
                           console.log(`_obj.id == req::${_obj.id == req}`,`t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,`"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,`Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
+                          console.log("app",t.app);
                           if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
                             console.log(i);
                             return !1;
@@ -3765,7 +3766,6 @@
                     }
                   }
                 }
-              console.log("checkRequireds=>!0",i);
               return !0
             }
           }
