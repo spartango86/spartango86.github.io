@@ -528,6 +528,13 @@
                 if(e.target.classList.contains("mdi-plus") || e.target.classList.contains("mdi-minus")) {
                   if(t.object.multipleUseVariable == 0 && t.object.isActive) {
                     t.activateObject(t.object, t.row);
+                    t.rows.forEach((_row) => {
+                      _row.objects.forEach((_obj) => {
+                        if("pdzygn" == _obj.id) {
+                          T.activateObject(_obj,_row);
+                        }
+                      })
+                    })
                   } else if((t.object.multipleUseVariable == 1 && e.target.classList.contains("mdi-plus")) || (t.object.multipleUseVariable == -1 && e.target.classList.contains("mdi-minus"))) {
                     t.activateObject(t.object, t.row);
                   }
@@ -3688,7 +3695,7 @@
                           // if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
                           console.log(`_obj.id == req::${_obj.id == req}`,`t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,`"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,`Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
                           if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
-                            console.log(e);
+                            // console.log(e);
                             // console.log("app",t);
                             return !1;
                           }
