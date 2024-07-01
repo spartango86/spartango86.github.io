@@ -512,7 +512,7 @@
           style: t.objectBackground,
           on: {
             click: function (e) {
-              console.log(t);
+              // console.log(t);
               // t.row.objects.forEach((_obj) => {
               //   console.log(_obj.id, t.checkRequireds(_obj));
               //   // console.log(_obj);
@@ -3688,7 +3688,7 @@
                           // if(_obj.id == "hzduwb") console.log(`${_row.id}::${_obj.id}[${oi}]: ${_obj.multipleUseVariable}`);
                           console.log(`_obj.id == req::${_obj.id == req}`,`t.app.activated.includes(_obj.id)::${t.app.activated.includes(_obj.id)}`,`"id" == i.requireds[s].type::${"id" == i.requireds[s].type}`,`Number(count) == _obj.multipleUseVariable::${Number(count) == _obj.multipleUseVariable}`);
                           if(_obj.id == req && t.app.activated.includes(_obj.id) && "id" == i.requireds[s].type && Number(count) == _obj.multipleUseVariable) {
-                            // console.log(i);
+                            console.log(e);
                             // console.log("app",t);
                             return !1;
                           }
