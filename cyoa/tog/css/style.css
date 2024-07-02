@@ -65,10 +65,12 @@ body {
     background-color: #c34571;
     border-radius: 10px !important;
     transition: border 0.3s linear;
-    
 }
 .choiceObject p, .rowDescriptionObject p {
     font-family: "Philosopher" !important;
+}
+.choiceObject p ~ .col {
+  min-height: 0;
 }
 .choiceObject h3 {
     font-family: "Arimo" !important;
