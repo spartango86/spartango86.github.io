@@ -100,6 +100,10 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+.rowDescriptionObject.row-onjo {
+  max-width: 640px;
+  margin: 0 auto;
+}
 .choiceObject.selected {
     background-color: #931541 !important;
     border: 4px maroon solid;
@@ -125,12 +129,12 @@ body {
     width: 75% !important;
     margin: 10px auto !important;
 }
-.choiceObject.row-69bu span > span {
+.choiceObject:is(.row-69bu,.row-onjo) span > span {
     display: block;
     position: relative;
     min-height: 87.2px;
 }
-.choiceObject.row-69bu.unselected h3 {
+.choiceObject:is(.row-69bu,.row-onjo).unselected h3 {
     position: absolute;
     top: 50%;
     text-align: center;
@@ -138,11 +142,11 @@ body {
     transform: translateY(-50%);
     transition: all 0.3s linear;
 }
-.choiceObject.row-69bu.selected h3, .choiceObject.row-69bu.unselected:hover h3 {
+.choiceObject:is(.row-69bu,.row-onjo).selected h3, .choiceObject:is(.row-69bu,.row-onjo).unselected:hover h3 {
     transform: translateY(0);
     top: 0;
 }
-.choiceObject.row-69bu.unselected p {
+.choiceObject:is(.row-69bu,.row-onjo).unselected p {
     opacity: 0;
     transition: opacity 0.3s linear;
     position: absolute;
@@ -151,7 +155,7 @@ body {
     transform: translate(-50%);
     width: 100%;
 }
-.choiceObject.row-69bu.selected p, .choiceObject.row-69bu.unselected:hover p {
+.choiceObject:is(.row-69bu,.row-onjo).selected p, .choiceObject:is(.row-69bu,.row-onjo).unselected:hover p {
     opacity: 1;
 }
 .rowDescriptionObject:is(.row-69bu, .row-zebd) {
