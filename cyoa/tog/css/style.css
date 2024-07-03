@@ -146,7 +146,7 @@ body {
     transform: translateY(0);
     top: 0;
 }
-.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r).unselected p {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).unselected p {
     opacity: 0;
     transition: opacity 0.3s linear;
     position: absolute;
