@@ -88,6 +88,9 @@ body {
     font-family: "Arimo" !important;
     font-size: 16px !important;
 }
+.rowDescriptionObject {
+  overflow: hidden;
+}
 .rowDescriptionObject h2 {
     font-family: "Nova Square" !important;
     font-size: 48px !important;
@@ -104,6 +107,10 @@ body {
 }
 .rowDescriptionObject:is(.row-onjo,.row-rg7r,.row-zm3i) {
   max-width: 640px;
+  margin: 0 auto;
+}
+.rowDescriptionObject.row-2zgd {
+  max-width: 555px;
   margin: 0 auto;
 }
 .choiceObject.selected {
