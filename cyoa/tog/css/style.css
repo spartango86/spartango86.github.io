@@ -123,8 +123,7 @@ body {
 .choiceObject.unselected.disabled:hover {
     filter: grayscale(70%) brightness(55%) !important;
 }
-.choiceObject.choice-qz18,
-.choiceObject.choice-tgz8gl {
+.choiceObject.choice-qz18 {
     flex-grow: unset;
     width: 75% !important;
     margin: 10px auto !important;
