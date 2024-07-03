@@ -97,6 +97,8 @@ body {
 }
 .choiceObject.choice-climb {
     max-width: 564px;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .choiceObject.selected {
     background-color: #931541 !important;
