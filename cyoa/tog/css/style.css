@@ -8,7 +8,7 @@ body::before {
     background-color: black;
     background-size: 30%;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: var(--sidebar-offset);
     background-attachment: fixed;
 }
 body::after {
@@ -19,7 +19,7 @@ body::after {
     background-color: black;
     background-size: 30%;
     background-repeat: no-repeat;
-    background-position: calc(50% + 2px) bottom;
+    background-position: var(--sidebar-offset) bottom;
     background-attachment: fixed;
 }
 body {
@@ -27,7 +27,7 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position-x: var(--sidebar-offset);
     background-attachment: fixed;
 }
 #app.v-application,
@@ -35,7 +35,6 @@ body {
     background-color: transparent !important;
 }
 #app {
-    --sidebar-gutter: 56px;
     padding-left: var(--sidebar-gutter);
     transition: padding 0.3s linear;
     border-top: 3px maroon solid;
@@ -179,4 +178,8 @@ body {
 }
 .rowDescriptionObject.row-ro2w p {
   grid-area: c;
+}
+:root {
+    --sidebar-gutter: 56px;
+    --sidebar-offset: calc(50% + var(--sidebar-gutter) / 2);
 }
