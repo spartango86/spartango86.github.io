@@ -129,12 +129,12 @@ body {
     width: 75% !important;
     margin: 10px auto !important;
 }
-.choiceObject:is(.row-69bu,.row-onjo) span > span {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i) span > span {
     display: block;
     position: relative;
     min-height: 87.2px;
 }
-.choiceObject:is(.row-69bu,.row-onjo).unselected h3 {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).unselected h3 {
     position: absolute;
     top: 50%;
     text-align: center;
@@ -142,11 +142,11 @@ body {
     transform: translateY(-50%);
     transition: all 0.3s linear;
 }
-.choiceObject:is(.row-69bu,.row-onjo).selected h3, .choiceObject:is(.row-69bu,.row-onjo).unselected:hover h3 {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).selected h3, .choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).unselected:hover h3 {
     transform: translateY(0);
     top: 0;
 }
-.choiceObject:is(.row-69bu,.row-onjo).unselected p {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r).unselected p {
     opacity: 0;
     transition: opacity 0.3s linear;
     position: absolute;
@@ -155,7 +155,7 @@ body {
     transform: translate(-50%);
     width: 100%;
 }
-.choiceObject:is(.row-69bu,.row-onjo).selected p, .choiceObject:is(.row-69bu,.row-onjo).unselected:hover p {
+.choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).selected p, .choiceObject:is(.row-69bu,.row-onjo,.row-rg7r,.row-zm3i).unselected:hover p {
     opacity: 1;
 }
 .rowDescriptionObject:is(.row-69bu, .row-zebd) {
