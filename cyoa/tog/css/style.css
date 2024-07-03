@@ -100,7 +100,7 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-.rowDescriptionObject.row-onjo {
+.rowDescriptionObject:is(.row-onjo,.row-rg7r,.row-zm3i) {
   max-width: 640px;
   margin: 0 auto;
 }
