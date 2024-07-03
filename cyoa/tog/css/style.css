@@ -78,6 +78,9 @@ body {
     font-weight: bold;
     padding: 0 5px;
 }
+.choiceObject span > p > img {
+  width: auto;
+}
 .choiceObject > .ma-0 > span > h3 + .col > .col {
   font-size: 120% !important;
 }
