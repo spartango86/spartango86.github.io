@@ -95,6 +95,9 @@ body {
 .choiceObject.choice-dhide {
   visibility: hidden;
 }
+.choiceObject.choice-climb {
+    max-width: 564px;
+}
 .choiceObject.selected {
     background-color: #931541 !important;
     border: 4px maroon solid;
