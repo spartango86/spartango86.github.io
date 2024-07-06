@@ -65,6 +65,10 @@ body {
     border-radius: 10px !important;
     transition: border 0.3s linear;
 }
+.choiceObject ul {
+  white-space: normal;
+  padding: 0 45px
+}
 .choiceObject p, .rowDescriptionObject p {
     font-family: "Philosopher" !important;
 }
