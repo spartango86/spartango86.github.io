@@ -227,3 +227,21 @@ body {
 .obj-select-multi .text-green-400 {
   filter: grayscale(0);
 }
+.menu-container .item-scores {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu-container .item-scores .score::after {
+  content: "";
+  background-image: url("https://cdn.imgchest.com/files/7kzcanegxn7.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  height: auto;
+  width: 12px;
+}
+.menu-container .item-scores .score:last-of-type::after {
+  content: unset;
+}
