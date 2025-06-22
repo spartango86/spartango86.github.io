@@ -1,0 +1,229 @@
+body {
+  background-image:url('https://cdn.imgchest.com/files/yq9c36k9e84.png');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-color:#121212;
+}
+.project {
+  background-color:transparent !important;
+}
+.project-row [id*="hide"] {
+  display: none !important;
+}
+.project-row-wrapper .project-row {
+  border-image-slice:110 130 110 130 fill;
+  border-image-width:110px 130px 110px 130px;
+  border-image-outset:0;
+  border-image-repeat:stretch stretch;
+  border-image-source:url("https://cdn.imgchest.com/files/y8xcnpad8n4.png");
+  border-style:solid;
+  padding:40px 50px
+}
+#row-main [id^="obj-"] .project-obj {
+  border-image-slice:17 110 18 110 fill;
+  border-image-width:18px 110px 20px 110px;
+  border-image-outset:0;
+  border-image-repeat:stretch stretch;
+  border-image-source:url("https://cdn.imgchest.com/files/y8xcnpadr54.png");
+  border-style:solid;
+  padding:15px 0
+}
+.project-row-wrapper .project-obj {
+  border-image-slice: 10 10 10 10 fill;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+  border-image-source: url("https://cdn.imgchest.com/files/4nec858rew4.png");
+  border-style: solid;
+  padding:10px;
+  filter:drop-shadow(8px 9px 6px #121212);
+  transition:all 0.3s ease-in-out;
+}
+.project-obj.selected {
+  filter:drop-shadow(0 0 5px #FFD700) drop-shadow(0 0 5px #FFC107) drop-shadow(0 0 3px #FFB300);
+}
+.project-row-wrapper {
+  max-width:calc(100vw - 200px)
+}
+.project-obj .obj-title,
+.project-row .row-title {
+  font-family:"Cinzel",serif;
+  font-optical-sizing:auto;
+  font-weight:600;
+  font-style:normal;
+  font-size:26px
+}
+#row-main .obj-title {
+  color:#e2e2e3
+}
+.project-obj .obj-text,
+.project-row .row-text {
+  font-family:"Crimson Pro",serif;
+  font-optical-sizing:auto;
+  font-weight:500;
+  font-size:17px;
+  font-style:normal
+}
+.project-row .row-text {
+  border-bottom:2px #bdb6a4 solid;
+  margin-bottom:8px
+}
+.row [id^="obj-"] {
+  margin-bottom:6px
+}
+.project-obj.disabled {
+  filter: grayscale(90%);
+  opacity: 60%;
+  cursor: url("https://cdn.imgchest.com/files/4gdcxnxqbe4.png") 16 16, not-allowed;
+}
+#row-credits .obj-image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+#row-credits .project-obj {
+  border-image-slice:10 27 10 27 fill;
+  border-image-width:10px 20px 10px 20px;
+  border-image-outset:0;
+  border-image-repeat:stretch stretch;
+  border-image-source:url("https://cdn.imgchest.com/files/ye3c2b2vne4.png");
+  border-style:solid;
+}
+.project-row-wrapper:not(#row-main) .project-obj.selected::before {
+  content:"";
+  display:block;
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  border-image-slice:30 30 30 30 fill;
+  border-image-width:20px;
+  border-image-outset:0;
+  border-image-repeat:repeat repeat;
+  border-image-source:url("https://cdn.imgchest.com/files/y2pck6kbdk7.png");
+  border-style:solid;
+  pointer-events:none;
+  z-index:11
+}
+#row-difficulty-ops {
+  --easy:url("https://cdn.imgchest.com/files/4apc5b63on4.png");
+  --normal:url("https://cdn.imgchest.com/files/7bwckbado27.png");
+  --hard:url("https://cdn.imgchest.com/files/yvdcw6adopy.png");
+  --lunatic:url("https://cdn.imgchest.com/files/yxkcz2bgoo7.png");
+  --maddening:url("https://cdn.imgchest.com/files/4nec85gmvm4.png");
+  --lunatic-plus:url("https://cdn.imgchest.com/files/49zc2zmbozy.png");
+  --apotheosis:url("https://cdn.imgchest.com/files/45xcve69wg7.png")
+}
+#row-difficulty-ops :is(.obj-image-wrapper,
+.obj-content) {
+  position:relative;
+  z-index:0
+}
+#row-difficulty-ops .obj-content {
+  z-index:10;
+  margin-top:-50px
+}
+#obj-easy-mode .obj-title {
+  border-image-source:var(--easy);
+  color:#eeeeee
+}
+#obj-normal-mode .obj-title {
+  border-image-source:var(--normal);
+  color:#222222
+}
+#obj-hard-mode .obj-title {
+  border-image-source:var(--hard);
+  color:#eeeeee
+}
+#obj-lunatic-mode .obj-title {
+  border-image-source:var(--lunatic);
+  color:#eeeeee
+}
+#obj-maddening-mode .obj-title {
+  border-image-source:var(--maddening);
+  color:#eeeeee
+}
+#obj-lunaticplus-mode .obj-title {
+  border-image-source:var(--lunatic-plus);
+  color:#eeeeee
+}
+#obj-apotheosis-mode .obj-title {
+  border-image-source:var(--apotheosis);
+  color:#eeeeee
+}
+#row-difficulty-ops .obj-title {
+  border-image-slice:20 20 20 20 fill;
+  border-image-width:20px;
+  border-image-outset:0;
+  border-image-repeat:stretch stretch;
+  border-style:solid;
+  border-width:20px;
+  font-family:"Cinzel Decorative",serif;
+  font-weight:700;
+  font-style:italic
+}
+#row-title .row-image {
+  border-radius: 75px;
+}
+#row-title {
+  position: relative;
+}
+#row-title .row-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: transparent;
+  min-height: 175px;
+  border-image-slice: 28 78 28 78 fill;
+  border-image-width: 28px 78px 27px 78px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round round;
+  border-image-source: url("https://cdn.imgchest.com/files/49zc2zmr9by.png");
+  border-style: solid;
+  border-width: 28px 78px 28px 78px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+#row-title .row-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.imgchest.com/files/yxkcz2b5567.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+#row-title .row-header {
+  overflow: visible;
+}
+.project-row [id^="obj-spacer-"] {
+  visibility: hidden;
+}
+.obj-content .obj-select-multi :is(.i-carbon-subtract-alt, .i-carbon-add-alt) {
+  mask: unset;
+  background-image: url("https://cdn.imgchest.com/files/yxkcz2ne967.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+.obj-content .obj-select-multi .i-carbon-add-alt {
+  background-image: url("https://cdn.imgchest.com/files/49zc2zaj8ry.png");
+}
+.obj-content .obj-select-multi {
+  color: #222;
+}
+.obj-content .obj-select-multi :is(.i-carbon-subtract-alt, .i-carbon-add-alt):active {
+  transform: scale(0.9);
+}
+.obj-select-multi .text-grey-400 {
+  filter: grayscale(1);
+}
+.obj-select-multi .text-green-400 {
+  filter: grayscale(0);
+}
