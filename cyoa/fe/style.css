@@ -56,8 +56,8 @@ body {
 #row-main .obj-title {
   color:#e2e2e3
 }
-.project-obj .obj-text,
-.project-row .row-text {
+.project-obj .project-obj-content .obj-text,
+.project-row .row-header .row-text {
   font-family:"Crimson Pro",serif;
   font-optical-sizing:auto;
   font-weight:500;
