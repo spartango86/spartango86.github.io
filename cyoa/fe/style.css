@@ -245,3 +245,6 @@ body {
 .menu-container .item-scores .score:last-of-type::after {
   content: unset;
 }
+#row-status-ops .obj-scores {
+  display: none;
+}
