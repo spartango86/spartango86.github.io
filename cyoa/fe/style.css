@@ -248,3 +248,23 @@ body {
 #row-status-ops .obj-scores {
   display: none;
 }
+#row-status-ops .project-obj {
+  min-width: 430px;
+  padding: 4px;
+}
+#row-status-ops .obj-text {
+  padding: 0;
+}
+#row-status-ops .obj-image {
+  width: 166px;
+}
+#row-status-ops .obj-title {
+  display: none;
+}
+.myrmidon-base-stats {
+  width: 414px;
+  height: 317px;
+  margin: 0 auto;
+  background-image: url("https://cdn.imgchest.com/files/7ogcbvrmpay.png");
+  border-top: 3px solid #4a4052;
+}
