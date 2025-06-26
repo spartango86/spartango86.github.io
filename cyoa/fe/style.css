@@ -293,3 +293,10 @@ body {
 .acolyte-base-stats {
   background-image: url("https://cdn.imgchest.com/files/yq9c36b9jv4.png");
 }
+#obj-base-stat-buy .obj-image {
+  max-width: 414px;
+  min-width: 414px;
+}
+#obj-base-stat-buy .obj-image-wrapper {
+  position: relative;
+}
