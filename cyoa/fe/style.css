@@ -392,3 +392,8 @@ body {
   bottom: 39px;
   --btn-plus-off: 1px;
 }
+#obj-base-cha, #obj-base-def, #obj-base-dex, #obj-base-hp,
+#obj-base-lck, #obj-base-mag, #obj-base-res, #obj-base-spd,
+#obj-base-str {
+  display: none;
+}
