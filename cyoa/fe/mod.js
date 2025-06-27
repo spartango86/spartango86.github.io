@@ -83,3 +83,27 @@ clickWrapper = function(ev) {
   }
 }
 document.querySelector("#obj-status > .project-obj").addEventListener('click', clickWrapper);
+// Select the node that will be observed for mutations
+const targetNode = document.querySelector(".menu-container .item-scores");
+
+// Options for the observer (which mutations to observe)
+const config = { childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+const callback = (mutationList, observer) => {
+  console.log(mutationList);
+  for (const mutation of mutationList) {
+//     console.log(mutation);
+    btn = document.querySelector("#obj-status .project-obj");
+    if(btn.classList.contains("selected")) {
+      points = calculateCurrentPoints();
+      displayPoints(points);
+    }
+  }
+};
+
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
