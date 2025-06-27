@@ -50,3 +50,36 @@ function calculateCurrentPoints() {
 
   return currentPoints;
 }
+moveMultiSelects = function() {
+  baseBuyIDs = ["hp","str","mag","dex","spd","lck","def","res","cha"];
+  dest = document.querySelector("#obj-base-stat-buy .obj-image-wrapper");
+  multis = document.querySelectorAll("#row-status-basestat-ops .obj-select-multi")
+  multis.forEach((el,idx) => {
+    el.id = "base-buy-" + baseBuyIDs[idx];
+    dest.appendChild(el);
+  });
+}
+
+displayPoints = function(pObj) {
+  for(statID in pObj) {
+    newID = statID.substring(1);
+    sel = "#base-buy-" + newID;
+    el = document.querySelector(sel);
+    if(el !== null) {
+      el.setAttribute('data-content', pObj[statID]);
+      bar = el.querySelector(".mx-1");
+      bar.style.setProperty("background-size", Math.round(pObj[statID]/80*100) + "% 8px")
+    }
+  }
+}
+clickWrapper = function(ev) {
+  el = ev.currentTarget;
+  if(el.classList.contains("selected")) {
+    console.log("Proceeding to move multiselects");
+    moveMultiSelects();
+    displayPoints(calculateCurrentPoints());
+  } else {
+    console.log("Closing status section");
+  }
+}
+document.querySelector("#obj-status > .project-obj").addEventListener('click', clickWrapper);
