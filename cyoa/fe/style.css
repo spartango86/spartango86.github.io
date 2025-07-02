@@ -42,9 +42,6 @@ body {
 .project-obj.selected {
   filter:drop-shadow(0 0 5px #FFD700) drop-shadow(0 0 5px #FFC107) drop-shadow(0 0 3px #FFB300);
 }
-.project-row-wrapper {
-  max-width:calc(100vw - 200px)
-}
 .project-obj .obj-title,
 .project-row .row-title {
   font-family:"Cinzel",serif;
@@ -396,4 +393,54 @@ body {
 #obj-base-lck, #obj-base-mag, #obj-base-res, #obj-base-spd,
 #obj-base-str {
   display: none;
+}
+.project > .rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  max-width: calc(100vw - 200px);
+}
+.project > .rows > div {
+  grid-column: 1/3;
+/*   outline: 4px black solid; */
+  
+}
+#row-skill-menu, #row-skill-descriptions, #row-class-skill-select, #row-passive-skill-select,
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select {
+  grid-column: 1;
+}
+#row-skill-menu .obj-title {
+  font-size: 1.1rem;
+  font-family: "Crimson Pro";
+}
+#row-skill-menu .row-header + .row {
+  position: relative;
+}
+#row-skill-menu .row-header + .row .project-obj.selected::before {
+  content: unset;
+}
+#row-skill-menu .project-obj.selected {
+  filter: unset;
+}
+#row-skill-menu .project-obj .obj-text {
+  display: none;
+}
+#row-skill-menu .project-obj.selected .obj-text {
+  display: block;
+  position: absolute;
+  left: 0;
+  line-height: 1;
+}
+#row-skill-menu .project-obj.canToggle {
+  padding: unset;
+  border-image: unset;
+  filter: unset;
+}
+#row-skill-menu .g-2 {
+  --bs-gutter-x: 0;
+}
+#row-skill-descriptions {
+  grid-column: 2;
+  grid-row: span 2;
+  display: flex;
 }
