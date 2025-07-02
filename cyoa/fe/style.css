@@ -413,10 +413,10 @@ body {
   font-size: 1.1rem;
   font-family: "Crimson Pro";
 }
-#row-skill-menu .row-header + .row {
+#row-skill-menu .row.g-2 {
   position: relative;
 }
-#row-skill-menu .row-header + .row .project-obj.selected::before {
+#row-skill-menu .row.g-2 .project-obj.selected::before {
   content: unset;
 }
 #row-skill-menu .project-obj.selected {
@@ -438,6 +438,19 @@ body {
 }
 #row-skill-menu .g-2 {
   --bs-gutter-x: 0;
+}
+#row-skill-menu .project-row {
+  margin-bottom: 0;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-row {
+  margin-top: 0;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-obj.selected {
+  filter: unset;
+  padding: unset;
+  border-image: unset;
 }
 #row-skill-descriptions {
   grid-column: 2;
