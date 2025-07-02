@@ -460,4 +460,13 @@ body {
   grid-column: 2;
   grid-row: span 2;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+#row-skill-descriptions > .project-row {
+  flex-grow: 1;
+}
+#row-skill-descriptions .project-obj.disabled {
+  display: none;
 }
