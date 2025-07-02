@@ -447,7 +447,11 @@ body {
   margin-top: 0;
 }
 :is(#row-class-skill-select, #row-passive-skill-select, 
-#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-obj.selected {
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .row.g-2 .project-obj.selected::before {
+  content: unset;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) :is(.project-obj.selected, .project-obj.canToggle) {
   filter: unset;
   padding: unset;
   border-image: unset;
