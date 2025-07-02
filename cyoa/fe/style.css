@@ -424,11 +424,15 @@ body {
 }
 #row-skill-menu .project-obj .obj-text {
   display: none;
+  border-width: 0 2px;
+  border-style: solid;
+  border-color: rgb(222, 226, 230);
 }
 #row-skill-menu .project-obj.selected .obj-text {
   display: block;
   position: absolute;
   left: 0;
+  right: 0;
   line-height: 1;
 }
 #row-skill-menu .project-obj.canToggle {
@@ -447,14 +451,31 @@ body {
   margin-top: 0;
 }
 :is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-row .row-header {
+  border-width: 0 2px;
+  border-style: solid;
+  border-color: rgb(222, 226, 230);
+  margin: 0;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
 #row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .row.g-2 .project-obj.selected::before {
   content: unset;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-row .row.g-2 {
+  padding: 5px 10px;
+  margin: 0;
+  border-width: 0 2px 2px 2px;
+  border-style: solid;
+  border-color: rgb(222, 226, 230);
+  border-radius: 0 0 8px 8px;
 }
 :is(#row-class-skill-select, #row-passive-skill-select, 
 #row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) :is(.project-obj.selected, .project-obj.canToggle) {
   filter: unset;
   padding: unset;
-  border-image: unset;
+  border-image: url("https://cdn.imgchest.com/files/yq9c3epb8m4.png");
+  border-image-slice: 10 10 10 10 fill;
 }
 #row-skill-descriptions {
   grid-column: 2;
@@ -464,8 +485,33 @@ body {
   align-items: stretch;
   justify-content: flex-start;
 }
+#row-skill-menu.project-row-wrapper .project-row {
+	border-image-slice: 20 20 0 20 fill;
+	border-image-width: 10px 10px 0px 10px;
+	border-image-source: url("https://cdn.imgchest.com/files/46acqb5ag67.png");
+	padding: 40px 50px;
+  padding-bottom: 25px;
+}
+#row-skill-menu .project-row .project-obj.canToggle {
+  border-width: 0;
+  border-bottom-width: 2px;
+}
+#row-skill-menu .project-row .project-obj.selected {
+  border-radius: 8px 8px 0 0;
+  border-width: 2px;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select).project-row-wrapper .project-row {
+	border-image-slice: 0 20 20 20 fill;
+	border-image-width: 0px 10px 10px 10px;
+	border-image-source: url("https://cdn.imgchest.com/files/4apc53kdva4.png");
+	padding: 0px 50px 20px 50px;
+}
 #row-skill-descriptions > .project-row {
   flex-grow: 1;
+}
+#row-skill-descriptions .project-row .row.g-2 {
+  background-image: unset;
 }
 #row-skill-descriptions .project-obj.disabled {
   display: none;
