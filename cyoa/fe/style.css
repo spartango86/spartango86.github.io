@@ -476,6 +476,26 @@ body {
   padding: unset;
   border-image: url("https://cdn.imgchest.com/files/yq9c3epb8m4.png");
   border-image-slice: 10 10 10 10 fill;
+  position: relative;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-obj.selected .obj-title {
+  font-style: italic;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .project-obj.selected::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("https://cdn.imgchest.com/files/yxkczgmmwo7.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 3px lightblue) drop-shadow(0 0 3px blue)
 }
 #row-skill-descriptions {
   grid-column: 2;
@@ -506,6 +526,33 @@ body {
 	border-image-width: 0px 10px 10px 10px;
 	border-image-source: url("https://cdn.imgchest.com/files/4apc53kdva4.png");
 	padding: 0px 50px 20px 50px;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .obj-template-left  {
+  overflow: unset;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .obj-image-wrapper {
+  position: relative;
+  padding: 2px;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .obj-image-wrapper::before {
+  content: "";
+  display: block;
+  background-image: url("https://cdn.imgchest.com/files/4jdcvjr2mn4.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+:is(#row-class-skill-select, #row-passive-skill-select, 
+#row-threshold-skill-select, #row-percentile-skill-select, #row-command-skill-select) .obj-image {
+  z-index: 10;
+  max-width: 40px;
 }
 #row-skill-descriptions > .project-row {
   flex-grow: 1;
